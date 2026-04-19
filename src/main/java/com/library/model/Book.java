@@ -25,4 +25,8 @@ public class Book {
     public void returnBook()  {
         isAvailable = true;
     }
+
+    public void displayBook() {
+        System.out.println(id + " | " + title + " | " + author + " | Available: " + isAvailable);
+    }
 }
