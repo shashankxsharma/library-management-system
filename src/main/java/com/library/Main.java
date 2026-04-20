@@ -11,6 +11,9 @@ public class Main {
         bookService.addBook(b1);
         bookService.addBook(b2);
 
+        bookService.borrowBook(1);
+        bookService.borrowBook(1); // try again
+        bookService.borrowBook(5); // not exist
     }
     }
 

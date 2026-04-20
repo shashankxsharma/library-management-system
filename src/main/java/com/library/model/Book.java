@@ -11,7 +11,12 @@ public class Book {
         this.title = title;
         this.author = author;
         this.isAvailable = true;
-     }
+
+    }
+
+    public int getId() {
+        return id;
+    }
 
     public void borrowBook() {
         if (isAvailable) {

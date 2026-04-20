@@ -18,6 +18,24 @@ public class BookService {
 
             book.displayBook();
         }
+        public void borrowBook(int id) {
+
+            boolean found = false;
+
+            for (Book book : books) {
+
+                if (book.getId() == id) {
+
+                    book.borrowBook();
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found) {
+                System.out.println("Book not found");
+            }
+        }
     }
 
 
