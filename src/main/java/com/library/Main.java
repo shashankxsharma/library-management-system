@@ -14,6 +14,7 @@ public class Main {
         bookService.borrowBook(1);
         bookService.borrowBook(1); // try again
         bookService.borrowBook(5); // not exist
+        bookService.borrowBook(76S);
     }
     }
 
