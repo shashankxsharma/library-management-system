@@ -13,11 +13,22 @@ public class BookService {
 
 
     }
-    public void showAllBooks(){
-        for (Book book : books){
+//    public void showAllBooks(){
+//        for (Book book : books){
+//
+//            book.displayBook();
+//        }
+public void showAllBooks() {
 
-            book.displayBook();
-        }
+    if (books.isEmpty()) {
+        System.out.println("No books available");
+        return;
+    }
+
+    for (Book book : books) {
+        book.displayBook();
+    }
+}
         public void borrowBook(int id) {
 
             boolean found = false;
@@ -39,5 +50,5 @@ public class BookService {
     }
 
 
-    }
+
 
