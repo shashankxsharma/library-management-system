@@ -2,8 +2,8 @@
 
 ## 🚀 Overview
 
-This is a simple console-based Library Management System built using Java.
-The project demonstrates core Object-Oriented Programming (OOP) concepts and basic layered architecture.
+This is a console-based Library Management System built using Java.
+The project demonstrates Object-Oriented Programming (OOP), layered architecture, and real-world backend logic such as validation and state handling.
 
 ---
 
@@ -26,38 +26,49 @@ com.library
 
 * Add books to the system
 * View all books
-* Borrow a book using book ID
-* Handle unavailable books
+* Borrow book using ID
+* Return book using ID
+* Prevent borrowing already borrowed books
+* Prevent returning already available books
 * Handle invalid book IDs
 
 ---
 
 ## 🧠 Concepts Used
 
-* Encapsulation (private fields with methods)
-* Abstraction (service layer hides logic)
+* Encapsulation (private fields + getters)
+* Abstraction (service layer handles logic)
 * Separation of Concerns (model, service, main)
 * ArrayList for in-memory storage
+* Conditional logic for real-world validation
 
 ---
 
 ## 🔄 Application Flow
 
-1. Main class starts the program
-2. BookService is initialized
-3. Book objects are created
-4. Books are stored in an ArrayList
-5. Service layer performs operations like add, view, borrow
+1. Application starts from Main class
+2. BookService initializes an in-memory list
+3. Books are created and added to the system
+4. User actions (borrow/return) are handled via service layer
+5. Service layer searches book by ID and delegates behavior to Book class
+6. Book class updates its internal state (available / not available)
 
 ---
 
 ## ▶️ Sample Output
 
-Book added successfully
-Book added successfully
+All Books:
+1 | java basic | James Gosling | Available: true
+2 | Clean code | Robert martin | Available: true
 
+Borrow Book:
 Book borrowed
 Not available
+Book not found
+
+Return Book:
+Book returned
+Already available
 Book not found
 
 ---
@@ -70,15 +81,27 @@ Book not found
 
 ---
 
-## 📌 Future Improvements
+## 📌 Improvements Added (Day 5)
 
-* Add returnBook functionality
+* Implemented `returnBook(int id)`
+* Added validation for already returned books
+* Improved error handling (book not found)
+* Enhanced output messages
+* Added edge case handling
+
+---
+
+## 🔮 Future Improvements
+
+* Refactor duplicate logic (Day 6)
+* Add User interaction (who borrows book)
 * Convert to Spring Boot REST API
-* Add database (MySQL / PostgreSQL)
-* Add authentication (JWT)
+* Add database (MySQL)
+* Implement authentication (JWT)
 
 ---
 
 ## 👨‍💻 Author
 
-Shashank sharma
+Your Name
+Shashank Sharma
