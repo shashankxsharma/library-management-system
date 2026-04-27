@@ -29,7 +29,14 @@ public void showAllBooks() {
         book.displayBook();
     }
 }
-        public void borrowBook(int id) {
+    public void borrowBook() {
+        if (isAvailable) {
+            isAvailable = false;
+            System.out.println("Book borrowed");
+        } else {
+            System.out.println("Not available");
+        }
+        public void returnBook(int id) {
 
             boolean found = false;
 
@@ -37,7 +44,7 @@ public void showAllBooks() {
 
                 if (book.getId() == id) {
 
-                    book.borrowBook();
+                    book.returnBook();
                     found = true;
                     break;
                 }
@@ -46,6 +53,8 @@ public void showAllBooks() {
             if (!found) {
                 System.out.println("Book not found");
             }
+        }
+    }
         }
     }
 
