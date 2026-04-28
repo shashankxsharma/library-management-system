@@ -34,18 +34,17 @@ public class Book {
 //            System.out.println("Not available");
 //        }
 //    }
-public void returnBook(int id) {
+public void borrowBook() {
+    if (isAvailable) {
+        isAvailable = false;
+        System.out.println("Book borrowed");
+    } else {
+        System.out.println("Not available");
+    }
+}
 
-    boolean found = false;
-
-    for (Book book : books) {
-
-        if (book.getId() == id) {
-
-            book.returnBook();
-            found = true;
-            break;
-        }
+    public void displayBook() {
+        System.out.println(id + " | " + title + " | " + author + " | Available: " + isAvailable);
     }
 
     if (!found) {

@@ -29,26 +29,42 @@ public void showAllBooks() {
         book.displayBook();
     }
 }
-    public void borrowBook() {
-        if (isAvailable) {
-            isAvailable = false;
-            System.out.println("Book borrowed");
-        } else {
-            System.out.println("Not available");
-        }
-        public void returnBook(int id) {
+    ppublic void borrowBook(int id) {
 
-            boolean found = false;
+        boolean found = false;
 
-            for (Book book : books) {
+        for (Book book : books) {
 
-                if (book.getId() == id) {
+            if (book.getId() == id) {
 
-                    book.returnBook();
-                    found = true;
-                    break;
-                }
+                book.borrowBook();
+                found = true;
+                break;
             }
+        }
+
+        if (!found) {
+            System.out.println("Book not found");
+        }
+    }
+    public void returnBook(int id) {
+
+        boolean found = false;
+
+        for (Book book : books) {
+
+            if (book.getId() == id) {
+
+                book.returnBook();
+                found = true;
+                break;
+            }
+        }
+
+        if (!found) {
+            System.out.println("Book not found");
+        }
+    }
 
             if (!found) {
                 System.out.println("Book not found");
