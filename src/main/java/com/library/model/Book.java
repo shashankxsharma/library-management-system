@@ -47,8 +47,7 @@ public void borrowBook() {
         System.out.println(id + " | " + title + " | " + author + " | Available: " + isAvailable);
     }
 
-    if (!found) {
-        System.out.println("Book not found");
+
     }
 }
 //    public void returnBook()  {

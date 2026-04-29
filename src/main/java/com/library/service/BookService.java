@@ -29,7 +29,7 @@ public void showAllBooks() {
         book.displayBook();
     }
 }
-    ppublic void borrowBook(int id) {
+    public void borrowBook(int id) {
 
         boolean found = false;
 
@@ -66,13 +66,12 @@ public void showAllBooks() {
         }
     }
 
-            if (!found) {
-                System.out.println("Book not found");
+
             }
-        }
-    }
-        }
-    }
+
+
+
+
 
 
 
